@@ -1,0 +1,22 @@
+{% extends ../base.html %}
+{% block content %}
+  <div class="container">
+    <div class="col-xs-12 update">
+      <div class="col-xs-12 my-group">My Groups</div>
+      {% for item in checkgroups %}
+      <div class="col-xs-4">
+        <ul>
+         <div class="ih-item circle effect13 from_left_and_right"><a href="#">
+           <div class="img"><img src="{{ static_url("img/1.jpg")}}" alt="img"></div>
+           <div class="info">
+             <div class="info-back">
+               <h3>{{ item['name'] }}</h3>
+               <button type="button" class="btn" name="button">JOIN</button>
+             </div>
+           </div></a></div>
+       </ul>
+      </div>
+      {% end %}
+    </div>
+  </div>
+   {% end %}
